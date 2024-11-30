@@ -12,6 +12,13 @@ __docformat__ = "reStructureText"
 import datetime
 import matplotlib.pyplot as plt
 
+import os
+proxy = 'http://127.0.0.1:7890'
+os.environ['http_proxy'] = proxy
+os.environ['HTTP_proxy'] = proxy
+os.environ['https_proxy'] = proxy
+os.environ['HTTPS_proxy'] = proxy
+
 # from geospacelab import preferences as pref
 # pref.user_config['visualization']['mpl']['style'] = 'dark'
 import geospacelab.visualization.mpl.geomap.geodashboards as geomap
